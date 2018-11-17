@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="">
+
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="x-ua-compatible" content="ie=edge">
+ <title></title>
+ <meta name="description" content="">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <!-- Your regular head tags -->
+ <!-- ... -->
+ <!-- Your regular head tags -->
+ <!-- Trackit Analytics -->
+ <script>
+  var _paq = window._paq || [];
+  // You can disable this feature by deleting or commenting the following code line
+  _paq.push(['trackPageView']);
+  (function () {
+   var u = "https://trackit.pergatech.com";
+   _paq.push(['setTrackerUrl', u + '/api/ve/']);
+   _paq.push(['setSiteId', {
+    $IDSITE
+   }]);
+   var d = document,
+    g = d.createElement('script'),
+    s = d.getElementsByTagName('script')[0];
+   g.type = 'text/javascript';
+   g.async = true;
+   g.defer = true;
+   g.src = u + '/js/v1.0/analytics.js';
+   s.parentNode.insertBefore(g, s);
+  })();
+ </script>
+ <!-- End Trackit Analytics -->
+</head>
+
+<body>
+ <!-- Your regular body tags -->
+ <!-- ... -->
+ <!-- Your regular body tags -->
+
+ <button id="trackerButton" type="button">BUTTON</button>
+
+ <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+ <!-- Trackit Custom Event -->
+ <script>
+  // Tracking the time your page has fully loaded with custom event:
+  $(window).load(function () {
+   var pageLoadedTime = new Date();
+   _paq.push(['trackEvent', 'page', 'onload', 'pageFullyLoaded', pageLoadedTime.getTime()]);
+
+   // doSomethingElse();
+   // ...
+  });
+ </script>
+ <!-- Trackit Custom Event -->
+
+ <!-- Trackit Custom Event -->
+ <script>
+  // Tracking a button click with custom event:
+  $('#trackerButton').on('click', function () {
+   _paq.push(['trackEvent', 'button', 'click', 'optionalButtonEventName', 'optionalButtonEventValue']);
+   // doSomethingElse();
+   // ...
+  });
+ </script>
+ <!-- Trackit Custom Event -->
+</body>
+
+</html>

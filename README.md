@@ -14,7 +14,7 @@ To track page views, events, visits, you have to send a HTTP request (GET) to TR
 
 Adding the following code (known as the *JavaScript tracking snippet*) to your site's templates is the start point for measuring how users interact with your website.
 
-Copy and paste the JavaScript tracking code into your pages, just after the opening _<body>_ tag (or within the _<head>_ section)
+Copy and paste the JavaScript tracking code into your pages, just after the opening `<body>` tag (or within the `<head>` section)
 
 ---
 ```html
@@ -65,9 +65,9 @@ _paq.push(['trackEvent', 'eventCategory', 'eventAction', 'eventName', 'eventValu
 ---
 and it will log an event with an event category (Forms, Downloads, Videos, Music, Games...), an event action (Submitted, Checked, Downloaded, Clicked...), and an optional event name and optional event value.
 
-**Example Code Blocks **
+**Example Code Blocks**
 
-*Tracking the time your page has fully loaded with custom event:*
+> Tracking the time your page has fully loaded with custom event:
 
 ```html
 <!-- Trackit Custom Event -->
@@ -84,7 +84,7 @@ and it will log an event with an event category (Forms, Downloads, Videos, Music
 ```
 ---
 
-*Tracking a button click with custom event:*
+> Tracking a button click with custom event:
 
 Suppose you have button in yout html code with id _trackerButton_
 

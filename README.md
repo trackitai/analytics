@@ -4,11 +4,13 @@
 
 ---
 
+
 ## TRACKIT HTTP API
 
 To track page views, events, visits, you have to send a HTTP request (GET) to TRACKIT HTTP API endpoint *(https://trackit.pergatech.com/api/ve/)* with the correct query parameters set.
 
 ---
+
 
 ## The JavaScript Tracking Snippet
 
@@ -24,7 +26,7 @@ Copy and paste the JavaScript tracking code into your pages, just after the open
   _paq.push(['trackPageView']);
   (function() {
     var u="https://trackit.pergatech.com";
-    _paq.push(['setTrackerUrl', u+'/api/ve/']);
+    _paq.push(['setTrackerUrl', u+'/api/ve/{$IDSITE}/']);
     _paq.push(['setSiteId', {$IDSITE}]);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
     g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'/js/v1.0/analytics.js'; s.parentNode.insertBefore(g,s);
@@ -44,14 +46,21 @@ _paq.push([ 'API_method_name', parameter_list ]);
 ```
 ---
 
+
 ## JavaScript Tracker Features
 
 ---
 **Tracking Page Views**
 
-By default, every page having the above javascript code snippet is tracked as visits. TrackitAPI uses the URL of the current page as _visit url_ and title of the page as _visit title_. You can disable this feature by deleting or commenting the code line: _\_paq.push(['trackPageView'])_
+By default, every page having the above javascript code snippet is tracked as visits. TrackitAPI uses the URL of the current page as _visit url_ and title of the page as _visit title_. You can disable this feature by deleting or commenting the code line:
 
 ---
+```javascript
+_paq.push([ 'trackPageView']);
+```
+---
+
+
 **Tracking Events**
 
 Once you've added the javaScript tracking snippet to your page and created a tracker, you can create custom events.
@@ -64,6 +73,7 @@ _paq.push(['trackEvent', 'eventCategory', 'eventAction', 'eventName', 'eventValu
 ```
 ---
 and it will log an event with an event category (Forms, Downloads, Videos, Music, Games...), an event action (Submitted, Checked, Downloaded, Clicked...), and an optional event name and optional event value.
+
 
 **Example Code Blocks**
 

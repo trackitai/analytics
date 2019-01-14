@@ -6,7 +6,7 @@
 
 ## TRACKIT HTTP API
 
-To track page views, events, visits, you have to send a HTTP request (GET) to TRACKIT HTTP API endpoint *(https://trackit.pergatech.com/api/ve/)* with the correct query parameters set.
+To track page views, events, visits, you have to send a HTTP request (GET) to TRACKIT HTTP API endpoint *(https://ti.trackit.ai/api/ve/)* with the correct query parameters set.
 
 ---
 
@@ -23,7 +23,7 @@ Copy and paste the JavaScript tracking code into your pages, just after the open
   var _paq = window._paq || [];
   _paq.push(['trackPageView']);
   (function() {
-    var u="https://trackit.pergatech.com";
+    var u="https://ti.trackit.ai";
     _paq.push(['setTrackerUrl', u+'/api/ve/']);
     _paq.push(['setSiteId', {$IDSITE}]);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
